@@ -8,7 +8,11 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 Book.delete_all
+Author.delete_all
 
 Book.create!(title: '12 Reglas para Vivir', year_of_publication: 2010)
 Book.create!(title: 'Papelucho', year_of_publication: 1947)
 Book.create!(title: 'Biblia', year_of_publication: 0)
+
+Author.create!(name: 'Jordan', last_name:  'Peterson', birth_date: Date.new(1949, 10, 15), blood: 1)
+Author.create!(name: 'Marcel', last_name:  'Paz', birth_date: Date.new(1902, 2, 28), blood: 2)
