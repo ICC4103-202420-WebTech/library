@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Libros</h1>
+    <ul>
+        <% @books.each do |book| %>
+            <li><%= link_to book.title, book_path(book) %>: <%= book.year_of_publication %></li>
+        <% end %>
+    </ul>
+</div>
+

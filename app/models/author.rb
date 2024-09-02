@@ -1,4 +1,6 @@
 class Author < ApplicationRecord
+  has_many :books
+
   validates :name, presence: true
   validates :last_name, presence: true
   validates :birth_date, presence: true
@@ -10,5 +12,9 @@ class Author < ApplicationRecord
     ab: 2,
     o: 3
   }
+
+  def full_name
+    "#{name} #{last_name}"
+  end
 
 end
