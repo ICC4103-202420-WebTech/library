@@ -5,5 +5,6 @@
             <li><%= link_to book.title, book_path(book) %>: <%= book.year_of_publication %></li>
         <% end %>
     </ul>
+    <%= link_to 'Nuevo', new_book_path %>
 </div>
 
