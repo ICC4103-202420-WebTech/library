@@ -1,0 +1,14 @@
+<%= form_with model: @book do |form| %>
+    <div class="mb-3">
+        <%= form.label :title, 'Título', class: 'form-label' %>
+        <%= form.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :year_of_publication, 'Año de publicación', class: 'form-label' %>
+        <%= form.number_field :year_of_publication, class: 'form-control' %>
+    </div>
+    <div class="mb-3">
+        <%= form.select :author_id, @authors.map{ |author| [author.full_name, author.id]}, {}, {class: 'form-select'} %>
+    </div>
+        <%= form.submit 'Guardar', class: 'btn btn-primary' %>
+<% end %>
